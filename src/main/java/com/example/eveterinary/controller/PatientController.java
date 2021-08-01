@@ -4,6 +4,7 @@ import com.example.eveterinary.dto.PatientRegistration;
 import com.example.eveterinary.model.Patient;
 import com.example.eveterinary.sevice.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,7 +16,7 @@ public class PatientController {
     @Autowired
     PatientService patientService;
 
-    @PostMapping("/patientSignUp")
+    @PostMapping( value = "/patientSignUp", consumes = MediaType.APPLICATION_JSON_VALUE)
     public Patient patientSignUp(@RequestBody PatientRegistration patientRegistration) throws Exception {
         return patientService.save(patientRegistration);
     }
