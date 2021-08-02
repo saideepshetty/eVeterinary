@@ -14,6 +14,7 @@ export default function Signup() {
     confirmPassword: "",
     confirmationCode: "",
   });
+
   const history = useHistory();
   const [newUser, setNewUser] = useState(null);
   const { userHasAuthenticated } = useAppContext();
@@ -76,7 +77,7 @@ export default function Signup() {
 
   function renderForm() {
     return (
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSaubmit}>
         <Form.Group controlId="email" size="lg">
           <Form.Label>Email</Form.Label>
           <Form.Control

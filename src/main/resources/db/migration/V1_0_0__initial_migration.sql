@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS  doctor  (
   id int NOT NULL PRIMARY KEY,
   doctor_name  varchar(256),
   speciality  varchar(256),
-  days_available jsonb
+  days_available text []
 );
