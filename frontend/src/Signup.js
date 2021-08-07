@@ -4,6 +4,7 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 // import LoaderButton from "../components/LoaderButton";
 import Button from "react-bootstrap/Button";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -137,7 +138,7 @@ function Signup() {
 
   return (
     <div className="Signup">
-      { renderForm() }
+      {renderForm()}
     </div>
   );
 

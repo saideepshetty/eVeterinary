@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
+import React, { Component } from "react";
 // import LoaderButton from "../components/LoaderButton";
 import Button from "react-bootstrap/Button";
 import {
@@ -12,6 +13,7 @@ import {
 } from "react-router-dom";
 import Signup from "./Signup.js";
 import DoctorsAvailability from "./DoctorsAvailability.js";
+import Appointment from './Appointment';
 
 
 function useFormFields(initialState) {
@@ -38,6 +40,9 @@ function App() {
         </Route>
         <Route path="/doctorsAvailability">
           <DoctorsAvailability />
+        </Route>
+        <Route path="/appointmentsSchedule">
+          <Appointment />
         </Route>
       </Switch>
     </Router>

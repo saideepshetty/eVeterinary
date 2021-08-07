@@ -20,7 +20,8 @@ public class DoctorController {
 
     @GetMapping(value = "/doctorsAvailability")
     public List<Doctor> doctorsAvailability(){
+
         return doctorService.findDoctors();
     }
-
+    
 }
